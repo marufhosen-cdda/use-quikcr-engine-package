@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@import "@marufhosen-cdda/biwd-blog-app/theme.css";
+
+/* Tailwind v4 doesn't auto-scan node_modules — point it at the package's
+   compiled output so its utility classes survive the build. */
+@source "../../node_modules/@marufhosen-cdda/biwd-blog-app/dist/**/*.{js,mjs}";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
