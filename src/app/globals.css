@@ -1,9 +1,6 @@
 @import "tailwindcss";
 @import "@marufhosen-cdda/biwd-blog-app/theme.css";
 
-/* Tailwind v4 doesn't auto-scan node_modules — point it at the package's
-   compiled output so its utility classes survive the build. */
-@source "../../node_modules/@marufhosen-cdda/biwd-blog-app/dist/**/*.{js,mjs}";
 
 :root {
   --background: #ffffff;
