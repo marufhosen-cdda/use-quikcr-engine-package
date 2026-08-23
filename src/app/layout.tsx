@@ -1,9 +1,9 @@
-import { QuikConfigProvider, ApiErrorBody } from "@quikcr/quik-engine";
-import "@quikcr/quik-engine/styles.css";
-
+import { QuikConfigProvider } from "@quikcr/quik-engine";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import type * as React from "react";
+import "@quikcr/quik-engine/styles.css";
+// import "./globals.css";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -21,13 +21,17 @@ export const metadata: Metadata = {
 /**
  * The host application's root layout.
  *
- * It owns the html/body shell, imports the package's compiled Tailwind CSS,
- * and lets the package's QuikEngine render everything inside <body>.
+ * Owns the <html>/<body> shell. The package's compiled stylesheet is
+ * imported via @import inside `app/globals.css` (first line) so the
+ * host's :root / .dark overrides win on cascade.
  *
- * <QuikConfigProvider> is the package's opt-in channel for host
+ * `<QuikConfigProvider>` is the package's opt-in channel for host
  * configuration. The demo forwards NEXT_PUBLIC_API_URL and
  * NEXT_PUBLIC_API_KEY so any future console screen that calls the host
  * API can read them through `useQuikConfig()`.
+ *
+ * `suppressHydrationWarning` silences the expected `next-themes` warning
+ * when the package flips the `dark` class on <html> after mount.
  */
 export default function RootLayout({
   children,
@@ -35,7 +39,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${poppins.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${poppins.variable} h-full antialiased`}
+      suppressHydrationWarning
+    >
       <body className="min-h-full bg-background font-sans text-foreground">
         <QuikConfigProvider
           apiUrl={process.env.NEXT_PUBLIC_API_URL}
