@@ -1,4 +1,4 @@
-import { QuikConfigProvider } from "@quikcr/quik-engine";
+import { QuikConfigProvider, QuikThemeConfig } from "@quikcr/quik-engine";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import type * as React from "react";
@@ -33,6 +33,14 @@ export const metadata: Metadata = {
  * `suppressHydrationWarning` silences the expected `next-themes` warning
  * when the package flips the `dark` class on <html> after mount.
  */
+
+const theme: QuikThemeConfig = {
+  primaryColor: "#50C878",
+  fontFamily: "geist-sans",
+  fontSize: 0.9,
+  borderRadius: 0.75,
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -48,6 +56,7 @@ export default function RootLayout({
         <QuikConfigProvider
           apiUrl={process.env.NEXT_PUBLIC_API_URL}
           apiKey={process.env.NEXT_PUBLIC_API_KEY}
+          theme={theme}
         >
           {children}
         </QuikConfigProvider>
