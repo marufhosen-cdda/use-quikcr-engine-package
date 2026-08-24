@@ -53,13 +53,13 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full bg-background font-sans text-foreground">
-        <QuikConfigProvider
-          apiUrl={process.env.NEXT_PUBLIC_API_URL}
-          apiKey={process.env.NEXT_PUBLIC_API_KEY}
-          theme={theme}
-        >
-          {children}
-        </QuikConfigProvider>
+          <QuikConfigProvider
+            tenantSlug={process.env.NEXT_PUBLIC_TENANT_SLUG ?? ""}
+            tenantApiKey={process.env.NEXT_PUBLIC_TENANT_API_KEY ?? ""}
+            theme={theme}
+          >
+            {children}
+          </QuikConfigProvider>
       </body>
     </html>
   );
