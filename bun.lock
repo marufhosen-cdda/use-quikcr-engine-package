@@ -5,7 +5,7 @@
     "": {
       "name": "use-package",
       "dependencies": {
-        "@quikcr/quik-engine": "^1.0.27",
+        "@quikcr/quik-engine": "^1.0.29",
         "next": "16.3.0",
         "next-themes": "^0.4.6",
         "react": "19.2.8",
@@ -138,7 +138,7 @@
 
     "@next/swc-win32-x64-msvc": ["@next/swc-win32-x64-msvc@16.3.0", "", { "os": "win32", "cpu": "x64" }, "sha512-fDOggsweNb5SSw0ZKVk6U+gxSyGFFlIBY/LBc1r8GUj4u/6t6oArL+Pmkg0MBnsgR+KkdsURilVH4F3GXUGepA=="],
 
-    "@quikcr/quik-engine": ["@quikcr/quik-engine@1.0.27", "https://npm.pkg.github.com/download/@quikcr/quik-engine/1.0.27/f7b2a2108428e75c166bb22b8cef0756dd7ccde4", { "dependencies": { "@radix-ui/react-dialog": "^1.1.23", "@radix-ui/react-dropdown-menu": "^2.1.24", "@radix-ui/react-label": "^2.1.15", "@radix-ui/react-select": "^2.2.6", "@radix-ui/react-separator": "^1.1.15", "@radix-ui/react-slot": "^1.3.3", "@radix-ui/react-switch": "^1.2.6", "@radix-ui/react-tabs": "^1.1.21", "@radix-ui/react-tooltip": "^1.2.4", "class-variance-authority": "^0.7.1", "clsx": "^2.1.1", "colorjs.io": "^0.7.1", "formik": "^2.4.9", "lucide-react": "^1.31.0", "next-themes": "^0.4.6", "react-router": "^8.3.0", "sonner": "^2.0.8", "tailwind-merge": "^3.6.0", "tailwindcss-animate": "^1.0.7", "yup": "^1.7.1" }, "peerDependencies": { "next": "^16.0.0", "react": "^19.0.0", "react-dom": "^19.0.0" } }, "sha512-MRC2J+Ki15hBUQjqsD0MEuFv+0hu3mlzgmg9MKZ9TPmnYa+dhdBuxDl6F/FMMTnQL6qm6NIP99zlN3Xqs06EYA=="],
+    "@quikcr/quik-engine": ["@quikcr/quik-engine@1.0.29", "https://npm.pkg.github.com/download/@quikcr/quik-engine/1.0.29/2292858be8e63bb74684f422cdcce308d45e39d4", { "dependencies": { "@radix-ui/react-dialog": "^1.1.23", "@radix-ui/react-dropdown-menu": "^2.1.24", "@radix-ui/react-label": "^2.1.15", "@radix-ui/react-select": "^2.2.6", "@radix-ui/react-separator": "^1.1.15", "@radix-ui/react-slot": "^1.3.3", "@radix-ui/react-switch": "^1.2.6", "@radix-ui/react-tabs": "^1.1.21", "@radix-ui/react-tooltip": "^1.2.4", "class-variance-authority": "^0.7.1", "clsx": "^2.1.1", "colorjs.io": "^0.7.1", "formik": "^2.4.9", "lucide-react": "^1.31.0", "next-themes": "^0.4.6", "react-router": "^8.3.0", "sonner": "^2.0.8", "tailwind-merge": "^3.6.0", "tailwindcss-animate": "^1.0.7", "yup": "^1.7.1" }, "peerDependencies": { "next": "^16.0.0", "react": "^19.0.0", "react-dom": "^19.0.0" } }, "sha512-Ka/bzMfoMJOjn2OZetPf6odg2HLua+a8GU4ds4pGKH0rIW3fMY0dHxbQTRpB76FbID9XCKJ5CYKnlLhfPD4UTQ=="],
 
     "@radix-ui/number": ["@radix-ui/number@1.1.3", "", {}, "sha512-Road2bidD0uu/1BGDOWNdPI06g0lIRy6IF9GZcIrDK2KGItfor8IQwQa+yM2ERgHM1MmHxaxpTzk0/Jp42lNfA=="],
 

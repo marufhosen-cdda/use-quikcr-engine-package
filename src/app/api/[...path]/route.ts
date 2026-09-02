@@ -1,12 +1,12 @@
 import { createProxyHandler } from "@quikcr/quik-engine";
 import type { NextRequest } from "next/server";
 
-// BE server URL - server-side only, never exposed to the browser
-const BE_URL = process.env.APP_BASE_URL || "http://localhost:8000";
+// The proxy's upstream backend URL is owned by the package —
+// `createProxyHandler` reads it from the internal QUIK_BACKEND_API_URL
+// constant. Hosts do not need to configure or pass it.
 const ENCRYPTION_KEY = process.env.PROXY_ENCRYPTION_KEY;
 
 const proxy = createProxyHandler({
-  baseUrl: BE_URL,
   encryptionKey: ENCRYPTION_KEY,
 });
 
